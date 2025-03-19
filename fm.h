@@ -17,7 +17,7 @@ private:
         if (fs.departure_time != other.fs.departure_time) {
             return fs.departure_time < other.fs.departure_time;  // Primary sort by departure time
         }
-        return fs.flight_no < other.fs.flight_no;  //  Secondary sort by flight number
+        return fs.duration_sec < other.fs.duration_sec;  //  Secondary sort by flight number
     }
 
     bool operator==(const FlightSegmentWrapper other) const {
