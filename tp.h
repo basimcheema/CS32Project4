@@ -83,6 +83,8 @@ public:
             itinerary.flights = soonestArrival.path;
             itinerary.source_airport = source_airport;
             itinerary.destination_airport = destination_airport;
+            if (soonestArrival.arrivalTime - start_time > get_max_duration())
+                return false;
             itinerary.total_duration = soonestArrival.arrivalTime - start_time;
             return true;
 
